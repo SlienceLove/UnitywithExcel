@@ -6,7 +6,7 @@
 #### 2.将EPPlus.dll，EPPlus.Interfaces.dll，Microsoft.IO.RecyclableMemoryStream.dll等依赖的dll放置Plugins文件夹下
 #### 3.注意 EPPLus在5.0版本以后需要用许可证，若无则可以添加一条声明做为个人非商用许可说明
 
- public void ExportToExcel(List<DuplicateLine> duplicates, string filePath)
+        public void ExportToExcel(List<DuplicateLine> duplicates, string filePath)
         {
             ExcelPackage.License.SetNonCommercialPersonal("唐力der");
             // 创建 Excel 文件
