@@ -5,7 +5,7 @@
 #### 1.从Nuget包中下载EPPLus包
 #### 2.将EPPlus.dll，EPPlus.Interfaces.dll，Microsoft.IO.RecyclableMemoryStream.dll等依赖的dll放置Plugins文件夹下
 #### 3.注意 EPPLus在5.0版本以后需要用许可证，若无则可以添加一条声明做为个人非商用许可说明
-
+#### 4.补充一下很坑的地方 Unity打包出来后的应用 运行会遇到一个编码437的问题 ，需要到UnitrEditor\Data\MonoBleedingEdge\lib\mono\unityjit下找到I18N.dll和I18N.West.dll文件；将其放到打包出来后的执行文件夹中 
         public void ExportToExcel(List<DuplicateLine> duplicates, string filePath)
         {
             ExcelPackage.License.SetNonCommercialPersonal("唐力der");
@@ -73,6 +73,7 @@
                 package.SaveAs(excelFile);
             }
 
+![Uploading image.png…]()
 
 
 ![image](https://github.com/user-attachments/assets/231038ce-953e-4bd5-b721-34173022e779)
